@@ -11,7 +11,7 @@ jobs:
       sonarcloud:
         organization: maurorojascabj
         token:
-          secure: $SONAR_TOKEN
+          secure: "qkw/3qnGXDhCkQw0uziI8lK7XnzEKXKQs/1GmqNozzHR708hG8jPVKKoFrLeM8cUG3uHtShnSGBVe+KOTepoVtIPBuMvMxnMnoMqUnqmwL3GW1XQHkTHBIT3/5IcOXiggV5rvGeEe+XEVhi15vMvX8mwz6ShHCgAmVcc+u8pMct2pwgSKz4/ARvKFp+/cf1nLCCCzCO/PzS/gA8OpBy7Kl3dp9zVLg96sZBvEJFTtBK54aHxcch4fvf8gUNkzQW5WfK8E/ZI8KaZt96PbkO0xD8aFuOvxmunuMOy+AmYDawWxE3SNlLk7aobMU1oj5BVOjCqttQzgHd5BchPGmcVsRG4PLhGV6Bs3jlpVBPYrTRxNHMyeyjrhlGJsdHkstwA9vrM9o17YhV4rN3Owprj/G6c1xjKACMmXraljmvt8f5keJ+Z+LHsrG1E4rXfwAQ3KaT7pW/IqT/HtM2y/yqoh5Lt5Wtk3epRcz4dq2GKLeH70N3NE4gUnuuHxNyZSwxF7UfHPvF6QWqZiBwQTzBtd1izc7PCigh9tSlUFSmCMHloT2w94DBVqPAn/IkmvVeQbukZ1fI1CJ2oT8e+OqPmATmFqZ0vl17e8sz6k3uYk7cs44ORpRFYk8/MEuPIYs2RYog1Wwne8XHV6WQLs8B+NKG1klZ82QoI83I5UeY116U="
     script:
     - sonar-scanner
   - stage: deploy to production
