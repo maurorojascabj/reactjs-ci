@@ -8,9 +8,11 @@ jobs:
   include:
   - stage: code inspection
     addons:
-      sonarcloud:
-        organization: maurorojascabj
-        token: "KJcyNgqbROFD9MdxtIDLoaerjMSW5qobn4UfTWgSJc0tLbY7O+5d4qlKzlU4yVClFd9Z4/i6XS/aQkPlxBgyrpBoD+VR/KMWrsfysCSxqYSbYIWaQgCXJI0gjlJP7wbsQmR1w5oxi+mZ0Yzl728hiQnOYgFfbDoNsxbgTUU69ftckyeeOyOXaiu6aMnv9p0P2XMAno1gQ5H2WTpcAdc8Ze2HeuAo1LceAzxtev6RhegOqfSDsLDGDz5qiEIH8QKxgPHVsv8fesHfxe6vcBqRcW14Ey+k+u1w8rxa5bACYh4WrUNkj4rvmr2VmY0hLRdhfAYCsD33RVEomFODdsvg+N4hBjXQ3D2dwvqNTJu9ySd0ZZV6lsENl4Pq4iR3HWqLL7dgdXMe+MlcODVXaC7n2NIKb5JNNZAGHLJFO2+eVtwAv2MvV6mg12NSEI6WVhTxS614cHDbMf5hi94NAOe8+DuDCgkpn9YrJJ/HRWluPaISVmUUO7jh2/qMRYl5eDGCqnGVY0boKL7K6ctx/RfBx6eL5rSCvqq9zC/oyz3hpO8HtpK6Fc3xr4JwcfrGYggN5jpsmtWtV5b0pJ+bHsJhtj6PvwUKGY+YZyWo3okM66GXzECVg5qK5Ixpijh/ie3V3Zj/HxCbswg6rQEiwDLbWZkDTi4K5yd6IhWTzG0PRvQ="
+      sonarqube:
+        organization: "maurorojascabj"
+        token:
+          secure: ddf0488329444848fe43fccb30aba66668785a34
+        # token: "KJcyNgqbROFD9MdxtIDLoaerjMSW5qobn4UfTWgSJc0tLbY7O+5d4qlKzlU4yVClFd9Z4/i6XS/aQkPlxBgyrpBoD+VR/KMWrsfysCSxqYSbYIWaQgCXJI0gjlJP7wbsQmR1w5oxi+mZ0Yzl728hiQnOYgFfbDoNsxbgTUU69ftckyeeOyOXaiu6aMnv9p0P2XMAno1gQ5H2WTpcAdc8Ze2HeuAo1LceAzxtev6RhegOqfSDsLDGDz5qiEIH8QKxgPHVsv8fesHfxe6vcBqRcW14Ey+k+u1w8rxa5bACYh4WrUNkj4rvmr2VmY0hLRdhfAYCsD33RVEomFODdsvg+N4hBjXQ3D2dwvqNTJu9ySd0ZZV6lsENl4Pq4iR3HWqLL7dgdXMe+MlcODVXaC7n2NIKb5JNNZAGHLJFO2+eVtwAv2MvV6mg12NSEI6WVhTxS614cHDbMf5hi94NAOe8+DuDCgkpn9YrJJ/HRWluPaISVmUUO7jh2/qMRYl5eDGCqnGVY0boKL7K6ctx/RfBx6eL5rSCvqq9zC/oyz3hpO8HtpK6Fc3xr4JwcfrGYggN5jpsmtWtV5b0pJ+bHsJhtj6PvwUKGY+YZyWo3okM66GXzECVg5qK5Ixpijh/ie3V3Zj/HxCbswg6rQEiwDLbWZkDTi4K5yd6IhWTzG0PRvQ="
     script:
     - sonar-scanner
   - stage: deploy to production
