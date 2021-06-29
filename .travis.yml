@@ -6,8 +6,6 @@ cache:
   - node_modules
 jobs:
   include:
-  # - stage: unit tests
-  #   script: npm test
   - stage: deploy to production
     script: npm run build
     deploy:
@@ -20,4 +18,4 @@ jobs:
         branch: master
 notifications:
   slack:
-    secure: R0kJhsvVT1Jr3//lSevE2Gi0X91hPAtJ31tA4aWP3p0jCsKfc83z/eBQkRSmRwARAONAp57rswBWW9wzFRaXmnKK26vcprqCi/xk9NKmuJsRVVNQ0a8FwXVURmVDHupwrqNBCFu+QCoRz8rv4OU9A68xkFSNjhOurSz7E7EFk8DRhIM278hV0BPxhlRjMhGT3t9RI1vKvM8NESxs5ogi4gOp+Z1KdZtxXvfi//7NQmLJyHlQVBAxQPxqHrzRzycF2MFLxzjIJlp2XBBotDGEIXDWBjZYWLNKmH/30HfqqQt2j/vJ4PFATOPc3Y1N3FM6S+vedo0hvdnsxmRaaNQsTO2CvtlT+dN1Sg5uY7D9/JEZ9Z4iSxgenIzHpnkJBW/GtMnVD+fhn24VmJZxwKWKY82g8q4NM0e+sEc3O4EIcpoN/N8EutSrRVtp3v2ddJCUqFZXvvdG3gaP6lrANoKjuvriSPQZjR4mOjZtsqFddL/q4wdY9mtF/lwYWD49wyfQ2PqDE9sVL1O0To4P57eC1FABwc24I+tjE2KQ0Ev/ugXvMFhgE6BWA1H66GPOzXPcqQBSTOPTvV5Xzalvga6ivX/zz0POMZlO41d6oRLfSoGCl9FfSeZh8jjdhRWW2Kr7Lh+uFN4qs9IZxdHSKV99osxfJlyfk1wTXgJtJgzi76o=
+    secure: d3NsAuw+IVhcpBD0r7ee9dFHS2MV+bvLDRa+lSScpmfaAeDjkCBQK0+YoHGHtKXoeFd3eU62KdSm8n+5MXu/oOHJxKlrCFZQqaAxXMX2IDwNlb/ngTs1CrIfzazu2BCsRIRiHaEobe1Ucna66RHwmlrZ7iFWOyLRgQf/UAq6oJf2o+Ut70rJkiUHJ4qtAJ3yeGBiQ1BMC6ebVEkYlK/9zCQYMp8j7ji1lTuqaq/jmYpXY2gT3lnfGL7lHOu2TsQkC4fXXd0OuNP2SG1h9bcrFuhw4mYXN2AcVgjumzWc4L3gPLpDiLbaev53G0b0ef632ivc4LuzBITmAXbcUpVx3TgzIhKAch9p/vawbPw9ssdxLnY7sB2S00Nd2/9Gnbhq4BqtLc2C0Gc7rpP6XZi3OdTDTzp4hpqnFLAbrF7Kp6Div8YKvt6H9dHW3+JWA3pEZ6VekdUrM2J4/Ozf5PJcSPBTfMTlGZJAoqNHSln2c/FyIdrmCpwIr/wTCJhkFA5oV4pJEgg0UoRXS60BBKw7ZKYZK2LpyQRH5Ti8+r8+Gq8lkjKj6uF9TvNrRzb10yak7mO+bjRGG57fGeGtdWBFmzf1MunQwaozu/nH0PzzfTeChMC4DfAw9UpDVEKJJkF9VS9bcZjdTtCxLTXQsYVbaqTUQ0DRJF5M2T0vUxuFxdw=
