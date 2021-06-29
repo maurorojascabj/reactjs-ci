@@ -6,6 +6,15 @@ cache:
   - node_modules
 jobs:
   include:
+  - stage: code inspection
+    addons:
+      sonarcloud:
+        organization: "maurorojascabj" # the key of the org you chose at step #3
+        token:
+          secure: "$SONAR_TOKEN" # encrypted value of your token
+    script:
+      # other script steps might be done before running the actual analysis
+      - sonar-scanner
   - stage: deploy to production
     script: npm run build
     deploy:
