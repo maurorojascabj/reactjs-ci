@@ -21,6 +21,10 @@ export const Login = () => {
                     </div>
                     <div className="col-md-12 mt-4 d-flex justify-content-end">
                         <button className="btn btn-primary">Submit</button>
+                        <button className="btn btn-primary">Submit</button>
+                        <button className="btn btn-primary">Submit</button>
+                        <button className="btn btn-primary">Submit</button>
+                        <button className="btn btn-primary">Submit</button>
                     </div>
                 </form>
             </div>
