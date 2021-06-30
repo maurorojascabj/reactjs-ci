@@ -1,5 +1,10 @@
 import React from 'react';
 
+const sumar = () => {
+    return a + b;
+}
+
+
 export const Login = () => {
     return (
     <>
