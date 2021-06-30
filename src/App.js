@@ -5,7 +5,6 @@ function App() {
   return (
     <div className="App w-100 bg-light">
       <Login/>
-      <Login/>
     </div>
   );
 }
