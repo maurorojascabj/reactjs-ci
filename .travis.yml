@@ -6,8 +6,6 @@ node_js:
 addons:
   sonarcloud:
     organization: "maurorojascabj"
-    token:
-      secure: $SONAR_TOKEN
 
 cache:
   directories:
@@ -17,7 +15,7 @@ jobs:
   include:
   - stage: code inspection
     script:
-      - sonar-scanner -Dsonar.projectKey=$SONAR_PROJECT_KEY
+      - sonar-scanner -Dsonar.projectKey=$SONAR_PROJECT_KEY -Dsonar.login=$SONAR_TOKEN
   - stage: deploy to production
     script: npm run build
     deploy:
