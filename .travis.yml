@@ -7,8 +7,8 @@ addons:
   sonarcloud:
     organization: "maurorojascabj"
     token:
-      secure: "X/3TQFi6D6SfORff/crGVUx0iT0mSUkAdt6SXEwOvfumf00B0USIwaBamKh7H8ei0l1JoTHyOmrPzDn76Klf2YIt2SWEHCCozpHf6fPJHvGjxnZOzTP1QNZnV/qrZETqLAKv/KXHAc0E3Qydq0jlWjSYsNoMCs6z4IPGKT/O5P96C9Y8dGodMHJou4lJXDSOolg5nCpUzBhOggMGrW1povU2TuK/qttK8shBH3TqLT/ttkWFM0lFTjmX7X1+JwMJE+gdQ8/gI6c+DmIZAvWVDrOJW/28U8IcTD7yto4ER1RvdTkpBbSEjmC42sa1HQk/mh0jJ4nfTcMgvJku0519w4Rqhl05r5fXY0v/gaU6WHr8Toyu0rhvU4WSlvlZCbdK7IrD+jJREHI/zgWGijXmnqAUKMPLlzGYx0c8a7rFr7dDzT4cLHQ8x0j+RzGAmeAs5o5D0tcMWXq/uU3rNvEc7+E96jy53Ib9aRYoxzKyDr2n10ynDZiI19xejEScChxEtrFlnd+QbZjw+thwUKyCTo490q5HhwnI5PZDzGdmW4booFaAzU0RARt8KrX3rZoV8UZznacUMJyku2I4sc2prXVr2tYo2dbtI31fHAGtlhVIcW3Ac/967e4pQzVCJmJ6DxCtY474CgyH6dtGepzpeuwwc4b4Kzs19oJ9/eb+vSE="
-
+      secure: $SONAR_TOKEN
+      
 cache:
   directories:
   - node_modules
