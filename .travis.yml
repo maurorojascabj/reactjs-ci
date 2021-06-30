@@ -8,7 +8,7 @@ addons:
     organization: "maurorojascabj"
     token:
       secure: $SONAR_TOKEN
-      
+
 cache:
   directories:
   - node_modules
@@ -17,7 +17,7 @@ jobs:
   include:
   - stage: code inspection
     script:
-      - sonar-scanner
+      - sonar-scanner -Dsonar.projectKey=$SONAR_PROJECT_KEY
   - stage: deploy to production
     script: npm run build
     deploy:
