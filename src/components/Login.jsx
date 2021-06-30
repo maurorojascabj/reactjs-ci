@@ -10,7 +10,7 @@ export const Login = () => {
                     <div className="row justify-content-center">
                         <div className="col-md-10">
                             <p>User</p>
-                            <input type="text" name="user" className="form-control" onclick="hacerAlgo()"></input>
+                            <input type="text" name="user" className="form-control"></input>
                         </div>
                     </div>
                     <div className="row justify-content-center my-3">
