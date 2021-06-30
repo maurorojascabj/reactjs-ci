@@ -16,6 +16,10 @@ jobs:
   - stage: code inspection
     script:
       - sonar-scanner -Dsonar.projectKey=$SONAR_PROJECT_KEY -Dsonar.login=$SONAR_TOKEN
+      
+  - stage: unit test
+    script: npm test
+
   - stage: deploy to production
     script: npm run build
     deploy:
@@ -26,5 +30,5 @@ jobs:
       app: reactjs-ci
       on:
         branch: master
-# notifications:
-#   slack: ingenieriasof-97b7969:leLR2neDDHJhQqfmGqu8D1nF
+notifications:
+  slack: ingenieriasof-97b7969:leLR2neDDHJhQqfmGqu8D1nF
