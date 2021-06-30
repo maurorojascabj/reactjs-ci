@@ -20,7 +20,6 @@ jobs:
     script: npm test
 
   - stage: deploy to production
-    script: npm run build
     deploy:
       provider: heroku
       cleanup: true
