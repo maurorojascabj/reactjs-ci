@@ -1,19 +1,22 @@
 language: node_js
+
 node_js:
 - stable
+
+addons:
+  sonarcloud:
+    organization: "maurorojascabj"
+    token:
+      secure: "D/9ZqT8wNadmSrazDDrJPIAIrOXAQKuaCxaOR/oWywMy9J6qJhzT8WOIGFJiVCTc6eZuorR/wEgAN5TJMJYDTyh2peaQJVSmoPXgOCZJaOfO6yUcBv99lmoJRG6FEm40MptduNJvReBrXjAaq5pHt6Q1np9Q34fU7QklY+bRocchvNat2kGaJnkSRqV8xb1G0dZcflElY6QqCoFbyxBMf0d5r0OZIbAJSt7U6f/ny2DeFmI31zi1Gw/BjDf0sBQCTMxK2fOVVcbNiXPP+ZwOtrcq1UXloVRpqFfMiqYVgZPzq/OaWlfIaN0AE9ocs4osCyi2wr0XrtaiglP6RVUCYcxj1jL1koeqhWVdLc+xTJxRALIe3KjM5IoWFNSC+zTvmsOB9VPya0965ITjfd8IiGftrHTxCyIDHANW78styTq6fr1UTVdam+oZpAC6MG+fh+/VwC1eZLBt62mmSRoj40V/FMHj0sNHBxV2JbiYybIu+rBYHa43vkoIibD8RWXUTq7bgOPyk/6JJzdyzfTBpCrlkFn806ojmfgRx4Vr9D9TuKSAKp3z7MCgZyBWWIg5g6gjT532ClOMFmBKfoQEZk4MeMRLEkMhF+qvSQjoSBMBN1/DBb14Jvl4kbc2vEmFuSRGE0fi5rNEqTf9MarPkxQ975nI4lFDhiomGPr5O2E=" # encrypted value of your token
+
 cache:
   directories:
   - node_modules
+
 jobs:
   include:
   - stage: code inspection
-    addons:
-      sonarcloud:
-        organization: "maurorojascabj"
-        token:
-          secure: "D/9ZqT8wNadmSrazDDrJPIAIrOXAQKuaCxaOR/oWywMy9J6qJhzT8WOIGFJiVCTc6eZuorR/wEgAN5TJMJYDTyh2peaQJVSmoPXgOCZJaOfO6yUcBv99lmoJRG6FEm40MptduNJvReBrXjAaq5pHt6Q1np9Q34fU7QklY+bRocchvNat2kGaJnkSRqV8xb1G0dZcflElY6QqCoFbyxBMf0d5r0OZIbAJSt7U6f/ny2DeFmI31zi1Gw/BjDf0sBQCTMxK2fOVVcbNiXPP+ZwOtrcq1UXloVRpqFfMiqYVgZPzq/OaWlfIaN0AE9ocs4osCyi2wr0XrtaiglP6RVUCYcxj1jL1koeqhWVdLc+xTJxRALIe3KjM5IoWFNSC+zTvmsOB9VPya0965ITjfd8IiGftrHTxCyIDHANW78styTq6fr1UTVdam+oZpAC6MG+fh+/VwC1eZLBt62mmSRoj40V/FMHj0sNHBxV2JbiYybIu+rBYHa43vkoIibD8RWXUTq7bgOPyk/6JJzdyzfTBpCrlkFn806ojmfgRx4Vr9D9TuKSAKp3z7MCgZyBWWIg5g6gjT532ClOMFmBKfoQEZk4MeMRLEkMhF+qvSQjoSBMBN1/DBb14Jvl4kbc2vEmFuSRGE0fi5rNEqTf9MarPkxQ975nI4lFDhiomGPr5O2E=" # encrypted value of your token
     script:
-      # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
       - sonar-scanner
   - stage: deploy to production
     script: npm run build
