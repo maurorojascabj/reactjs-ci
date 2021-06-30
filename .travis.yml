@@ -3,10 +3,6 @@ language: node_js
 node_js:
 - stable
 
-addons:
-  sonarcloud:
-    organization: "maurorojascabj"
-
 cache:
   directories:
   - node_modules
@@ -14,9 +10,12 @@ cache:
 jobs:
   include:
   - stage: code inspection
+    addons:
+      sonarcloud:
+        organization: "maurorojascabj"
     script:
       - sonar-scanner -Dsonar.projectKey=$SONAR_PROJECT_KEY -Dsonar.login=$SONAR_TOKEN
-      
+
   - stage: unit test
     script: npm test
 
