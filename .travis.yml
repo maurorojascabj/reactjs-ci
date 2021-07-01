@@ -15,6 +15,9 @@ jobs:
         organization: "maurorojascabj"
     script:
       - sonar-scanner -Dsonar.projectKey=$SONAR_PROJECT_KEY -Dsonar.login=$SONAR_TOKEN
+  
+  - stage: unit test
+    script: npm test
 
   - stage: deploy to production
     deploy:
